@@ -45,9 +45,6 @@ function homeParallax()
 }
 
 
-
-
-
 function AboutParallax()
 {
     const aboutContainer = document.getElementById("aboutContainer");
@@ -61,12 +58,7 @@ function AboutParallax()
     window.addEventListener('scroll', function ()
     {
         var scrollY = window.scrollY;
-        var rect = aboutContainer.getBoundingClientRect();
 
-        // Check if the bottom of the element is within the viewport
-        if (rect.bottom > 1000)
-        {
-        }
         aboutContainer.style.transform = `translateY(${scrollY * 0.5}px)`;
 
         rocket.style.transform = `translateY(${scrollY * -0.3}px)`;
@@ -80,5 +72,9 @@ function AboutParallax()
 
 
 /* || START FUNCTIONS */
-homeParallax();
-AboutParallax();
+
+document.addEventListener("DOMContentLoaded", () =>
+{
+    homeParallax();
+    AboutParallax();
+});
