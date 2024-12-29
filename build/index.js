@@ -51,6 +51,12 @@ function homeParallax()
 function AboutParallax()
 {
     const aboutContainer = document.getElementById("aboutContainer");
+    const Cloud1 = document.getElementById("Cloud1");
+    const rocket = document.getElementById("rocket");
+    const outerCloudAbout = document.getElementById("outerCloudAbout");
+    const rocketSmoke = document.getElementById("rocketSmoke");
+    const rocketExplorerText = document.getElementById("rocketExplorerText");
+
 
     window.addEventListener('scroll', function ()
     {
@@ -60,14 +66,18 @@ function AboutParallax()
         // Check if the bottom of the element is within the viewport
         if (rect.bottom > 1000)
         {
-            aboutContainer.style.transform = `translateY(${scrollY * 0.5}px)`;
         }
+        aboutContainer.style.transform = `translateY(${scrollY * 0.5}px)`;
 
-        console.log(rect.bottom);
+        rocket.style.transform = `translateY(${scrollY * -0.3}px)`;
+        rocketExplorerText.style.transform = `translateX(${scrollY * -1}px)`;
+
+        Cloud1.style.transform = `translateY(${scrollY * 0.15}px)`
+        outerCloudAbout.style.transform = `translateX(${scrollY * 0.15}px)`
+
     });
 }
 
-AboutParallax();
 
 /* || START FUNCTIONS */
 homeParallax();
