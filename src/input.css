@@ -13,9 +13,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 20px;
 
-    background: linear-gradient(to top, #f472b6, transparent);
+    background: linear-gradient(to top, #9358AA  ,transparent);
 
     z-index: 1000;
 }
