@@ -48,23 +48,40 @@ function homeParallax()
 function AboutParallax()
 {
     const aboutContainer = document.getElementById("aboutContainer");
-    const Cloud1 = document.getElementById("Cloud1");
+    const cloudAbout1 = document.getElementById("cloudAbout1");
+    const cloudAbout2 = document.getElementById("cloudAbout2");
     const rocket = document.getElementById("rocket");
     const outerCloudAbout = document.getElementById("outerCloudAbout");
     const rocketSmoke = document.getElementById("rocketSmoke");
     const rocketExplorerText = document.getElementById("rocketExplorerText");
 
+    console.log(rocketSmoke.style.transform)
 
     window.addEventListener('scroll', function ()
     {
         var scrollY = window.scrollY;
 
+        const aboutSection = document.getElementById("about");
+        const rect = aboutSection.getBoundingClientRect();
+
+
+
+        // If the sections lowest area has been scrolled by the user, then make the smoke go up too
+        rocketSmoke.style.transform = `translateY(${scrollY * -0.3}px)`; // I CAN'T );
+
         aboutContainer.style.transform = `translateY(${scrollY * 0.5}px)`;
 
-        rocket.style.transform = `translateY(${scrollY * -0.3}px)`;
-        rocketExplorerText.style.transform = `translateX(${scrollY * -1}px)`;
+        rocket.style.transform = `translateY(${scrollY * -0.9}px)`;
+        rocketExplorerText.style.transform = `translateX(${scrollY * -1.05}px)`;
 
-        Cloud1.style.transform = `translateY(${scrollY * 0.15}px)`
+        cloudAbout1.style.transform = `translate(${scrollY * 0.1}px, ${scrollY * -0.15}px) 
+        scale(${1 + (scrollY * -0.0003)}, ${1 + (scrollY * -0.0003)})`;
+
+        /*   cloudAbout2.style.transform = `translate(${scrollY * 0.3}px, ${scrollY * -0.2}px) 
+          scale(${1 + (scrollY * -0.0001)}, ${1 + (scrollY * -0.0001)})`; */
+
+
+
         outerCloudAbout.style.transform = `translateX(${scrollY * 0.15}px)`
 
     });
