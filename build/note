@@ -1,0 +1,28 @@
+<div class="min-h-screen flex flex-col items-center justify-center">
+
+    <h1 class="text-center text-4xl font-bold p-6 text-white">Choose Your Mission</h1>
+
+    <div id="cards" class="h-auto w-full flex flex-row justify-around">
+
+        <div class="h-[30rem] w-[20r] drop-shadow-xl bg-indigo-600 px-6 py-10 ">
+            <h2 class="font-bold text-2xl m-5 text-center text-white"></h2>
+            <p class="text-center text-white m-4 text-lg">
+            </p>
+            <button class="bg-indigo-700 px-6 py-3 rounded-xl text-white my-5">BTN</button>
+        </div>
+
+        <div class="h-[30rem] w-[20r] drop-shadow-xl bg-indigo-600 px-6 py-10">
+            <h2 class="font-bold text-2xl m-5 text-center text-white"></h2>
+            <p class="text-center text-white m-4 text-lg">
+            </p>
+            <button class="bg-indigo-700 px-6 py-3 rounded-xl text-white my-5">BTN</button>
+        </div>
+
+        <div class="h-[30rem] w-[20r] drop-shadow-xl bg-indigo-600 px-6 py-10">
+            <h2 class="font-bold text-2xl m-5 text-center text-white"></h2>
+            <p class="text-center text-white m-4 text-lg">
+            </p>
+            <button class="bg-indigo-700 px-6 py-3 rounded-xl text-white my-5">BTN</button>
+        </div>
+    </div>
+</div>

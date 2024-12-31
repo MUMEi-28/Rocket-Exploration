@@ -88,10 +88,43 @@ function AboutParallax()
 }
 
 
+/// SMOOTHER SCROLLING https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript
+function init()
+{
+    new SmoothScroll(document, 120, 30);
+}
+
+function SmoothScroll(target, speed, smooth)
+{
+    target = target.scrollingElement || target.documentElement || target.body;
+
+    let moving = false, pos = target.scrollTop;
+
+    target.addEventListener('wheel', (e) =>
+    {
+        e.preventDefault();
+        const delta = (e.wheelDelta || -e.detail * 40) / 120; // Normalize wheel delta
+        pos = Math.max(0, Math.min(pos - delta * speed, target.scrollHeight - target.clientHeight + 1));
+        if (!moving) animate();
+    }, { passive: false });
+
+    function animate()
+    {
+        moving = true;
+        const delta = (pos - target.scrollTop) / smooth;
+        target.scrollTop += delta;
+        if (Math.abs(delta) > 0.1) requestAnimationFrame(animate); // Lower threshold for precision
+        else moving = false;
+    }
+}
+
 /* || START FUNCTIONS */
 
 document.addEventListener("DOMContentLoaded", () =>
 {
     homeParallax();
     AboutParallax();
+
+    new SmoothScroll(document, 120, 60);
+
 });

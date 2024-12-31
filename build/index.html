@@ -77,7 +77,8 @@
                 src="../Images/About/cloudAbout2.png" alt="">
 
             <div id="aboutContainer" class="absolute bottom-[35rem] w-[40rem] h-9w-[40rem]">
-                <h1 class="relative bottom-[2rem] text-center text-4xl font-bold text-white">About Rocket Explorer</h1>
+                <h1 class="relative bottom-[2rem] text-center text-4xl font-extrabold text-white">About Rocket Explorer
+                </h1>
 
                 <img src="../Images/About/ContainerTransparent.png" alt="container" class=" w-full h-full object-cover">
 
@@ -111,7 +112,8 @@
                 class="absolute  w-auto h-full top-[40rem] left-0 pointer-events-none object-cover lg:object-fill"
                 src="../Images/About/rocket.png" alt="">
 
-            <h1 id="rocketExplorerText" class="text-white text-[4rem]  my-[3.5rem] relative left-[900px]">ROCKET
+            <h1 id="rocketExplorerText" class="text-white text-[4rem]  my-[3.5rem] relative left-[900px] font-bold  ">
+                ROCKET
                 EXPLORER
             </h1>
 
@@ -126,46 +128,65 @@
 
         <section id="rockets" class="min-h-screen bg-gradient-to-b from-[#8E59AA] via-indigo-600 to-purple-900">
 
-            <div id="card-container" class="min-h-screen flex flex-col justify-center items-centers  p-8">
+            <div id="card-container" class="min-h-screen flex flex-col justify-center items-centers">
 
-                <h1 class="text-center text-4xl font-bold p-6 text-white">OUR ROCKETS</h1>
+                <h1 class="relative top-[-2rem] text-center text-4xl font-bold p-6 text-white">OUR ROCKETS</h1>
 
-                <div id="cards" class="flex flex-row gap-10 justify-around h-[400px]">
+                <div id="cards" class="flex flex-col gap-10 justify-evenly items-center xl:flex-row xl:gap-0  ">
 
-                    <div class="drop-shadow-xl flex flex-col items-center  bg-indigo-600 px-6 py-10">
-                        <h2 class="font-bold text-2xl m-5 text-center text-white">BASIC</h2>
-                        <p class="text-center text-white m-4 text-lg">Lorem ipsum dolor sit amet
-                            consectetur,
-                            adipisicing elit.
-                            Impedit placeat
-                            nesciunt
-                            exercitationem
+                    <!-- CARD 1 -->
+                    <div class="w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 px-6 py-2">
+                        <h2 class="font-bold text-2xl my-5 text-center text-white whitespace-nowrap">Jupiter Flyby</h2>
+
+                        <div
+                            class="shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden ">
+                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Stars.png" alt="">
+                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Jupiter.png" alt="">
+
+                        </div>
+
+                        <p class="text-center text-white text-lg mt-[2rem]">Experience a close encounter with Jupiter,
+                            witnessing its swirling storms and iconic Great Red Spot.
                         </p>
-                        <button class="bg-indigo-700 px-6 py-3 rounded-xl text-white my-5">BTN</button>
+                        <button class="mt-4 bg-indigo-700 px-6 py-3 rounded-xl text-white ">Get Ticket</button>
                     </div>
 
-                    <div class="drop-shadow-xl flex flex-col items-center  bg-indigo-600 px-6 py-10">
-                        <h2 class="font-bold text-2xl m-5 text-center text-white">BASIC</h2>
-                        <p class="text-center text-white m-4 text-lg">Lorem ipsum dolor sit amet
-                            consectetur,
-                            adipisicing elit.
-                            Impedit placeat
-                            nesciunt
-                            exercitationem
+                    <!-- CARD 2 -->
+                    <div class="w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 px-6 py-2">
+                        <h2 class="font-bold text-2xl my-5 text-center text-white whitespace-nowrap">Saturn Ring
+                            Exploration
+                        </h2>
+
+                        <div
+                            class="shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden">
+                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Stars.png" alt="">
+                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Saturn.png" alt="">
+
+                        </div>
+                        <p class="text-center text-white text-lg mt-[2rem]">Journey to Saturn and glide through its
+                            stunning
+                            rings, observing their intricate structure.
                         </p>
-                        <button class="bg-indigo-700 px-6 py-3 rounded-xl text-white my-5">BTN</button>
+                        <button class="mt-4 bg-indigo-700 px-6 py-3 rounded-xl text-white ">Get Ticket</button>
                     </div>
 
-                    <div class="drop-shadow-xl flex flex-col items-center  bg-indigo-600 px-6 py-10">
-                        <h2 class="font-bold text-2xl m-5 text-center text-white">BASIC</h2>
-                        <p class="text-center text-white m-4 text-lg">Lorem ipsum dolor sit amet
-                            consectetur,
-                            adipisicing elit.
-                            Impedit placeat
-                            nesciunt
-                            exercitationem
+                    <!-- CARD 3 -->
+                    <div class="w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 px-6 py-2 ">
+
+                        <h2 class="font-bold text-2xl my-5 text-center text-white whitespace-nowrap">Space Station Visit
+                        </h2>
+
+                        <div
+                            class="shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden">
+                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Stars.png" alt="">
+                            <img class=" absolute object-cover w-full h-full" src="../Images/Cards/ISS.png" alt="">
+
+                        </div>
+                        <p class="text-center text-white text-lg mt-[2rem]">Tour the International Space Station,
+                            experiencing
+                            life in zero gravity and observe daily astronaut routines.
                         </p>
-                        <button class="bg-indigo-700 px-6 py-3 rounded-xl text-white my-5">BTN</button>
+                        <button class="mt-4 bg-indigo-700 px-6 py-3 rounded-xl text-white ">Get Ticket</button>
                     </div>
                 </div>
             </div>
