@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rocket Explorer</title>
+
+    <link rel="icon" href="../src/Rocket-Explorer/ISS.png" type="image/png">
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -17,6 +19,13 @@
     </header>
 
     <main>
+
+        <div id="warning" class="text-center z-10 fixed p-[2rem] bg-orange-700 text-orange-50 bottom-10 left-1/2 transform
+             -translate-x-1/2 lg:hidden">
+            View on Desktop to See All Features
+        </div>
+
+
         <section id="home"
             class="min-h-screen bg-gradient-to-t from-pink-400 via-indigo-700 to-violet-950 relative overflow-hidden flex flex-col justify-center items-center">
 
@@ -64,7 +73,7 @@
 
 
         <section id="about"
-            class="transitionSection min-h-screen bg-gradient-to-b from-pink-400  via-sky-600 to-sky-700 z-0 flex items-center flex-col justify-end relative overflow-hidden">
+            class=" min-h-screen bg-gradient-to-b from-pink-400  via-sky-600 to-sky-700 z-0 flex items-center flex-col justify-end relative overflow-hidden">
 
             <!--             <input type="text" autofocus>
  -->
@@ -211,7 +220,37 @@
 
         </section>
 
+        <section id="rocketTravel"
+            class="overflow-hidden relative min-h-screen bg-gradient-to-b from-sky-800 to-sky-600 hidden lg:flex justify-center">
+            <img id="rocket1" class="transition-all ease-in-out duration-[0.1s] absolute top-[-70rem] right-[200rem]"
+                src="../Images/flyingRocket.png" alt="">
+        </section>
+
+        <section id="rocketTravel"
+            class="overflow-hidden relative min-h-screen bg-gradient-to-b from-sky-600 via-sky-600 to-orange-100 hidden lg:flex justify-center">
+            <img id="rocket2" class=" transition-all ease-in-out duration-[0.1s] absolute top-[-80rem] left-[300rem]"
+                src="../Images/flyingRocket.png" alt="">
+
+        </section>
+
     </main>
+
+    <section id="bait" class="hidden lg:flex min-h-screen bg-orange-100 text-[10rem] font-bold text-orange-700">
+        DAMN <br>
+        LOOKS LIKE
+        YOU HAD
+        FUN
+    </section>
+
+    <footer class=" min-h-[20vh] bg-indigo-800 text-white flex flex-col items-center justify-between gap-2">
+        <p class="text-[1.2rem] mt-[1rem]">copyright &copy; 2025 by MJ</p>
+        <div class="flex flex-row items-center gap-3">
+            <a class="text-[1.2rem]" href="https://github.com/MUMEi-28" target="_blank">↓ Github Repository ↓</a>
+        </div>
+
+        <p class="my-[1.5rem]">Contact Me if U Want a Site Like This At: <a
+                href="mailto:marcjerseycastro@gmail.com">marcjerseycastro@gmail.com</a></p>
+    </footer>
 </body>
 
 </html>

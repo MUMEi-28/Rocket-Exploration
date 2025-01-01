@@ -39,3 +39,18 @@
 {
     background-image: url("../../Images/Cards/Stars.png");
 }
+
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #2e1065;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: #f472b6;
+}
