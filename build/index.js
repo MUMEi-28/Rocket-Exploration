@@ -88,10 +88,102 @@ function AboutParallax()
 }
 
 
+/// SMOOTHER SCROLLING https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript
+
+function SmoothScroll(target, speed, smooth)
+{
+    target = target.scrollingElement || target.documentElement || target.body;
+
+    let moving = false, pos = target.scrollTop;
+
+    target.addEventListener('wheel', (e) =>
+    {
+        e.preventDefault();
+        const delta = (e.wheelDelta || -e.detail * 40) / 120; // Normalize wheel delta
+        pos = Math.max(0, Math.min(pos - delta * speed, target.scrollHeight - target.clientHeight + 1));
+        if (!moving) animate();
+    }, { passive: false });
+
+    function animate()
+    {
+        moving = true;
+        const delta = (pos - target.scrollTop) / smooth;
+        target.scrollTop += delta;
+        if (Math.abs(delta) > 0.1) requestAnimationFrame(animate); // Lower threshold for precision
+        else moving = false;
+    }
+}
+function CardParallax()
+{
+    const tiltEls = document.querySelectorAll('.tilt');
+
+    tiltEls.forEach(tilt =>
+    {
+        const backgrounds = tilt.querySelectorAll(".starBg");
+        const cards = tilt.querySelector(".cards");
+        const images = tilt.querySelectorAll(".card__img");
+        const range = 50; // Adjusted range for a more balanced effect
+
+        const calcValue = (a, b) => (a / b * range - range / 2).toFixed(1);
+
+        let timeout;
+
+        tilt.addEventListener('mousemove', (e) =>
+        {
+            if (timeout)
+            {
+                window.cancelAnimationFrame(timeout);
+            }
+
+            timeout = window.requestAnimationFrame(() =>
+            {
+                const rect = tilt.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                const x = e.clientX - rect.left;
+
+                const yValue = calcValue(y, tilt.clientHeight);
+                const xValue = calcValue(x, tilt.clientWidth);
+
+                cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+                images.forEach(image =>
+                {
+                    image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+                });
+
+                backgrounds.forEach(background =>
+                {
+                    background.style.backgroundPosition = `${xValue * 2}px ${-yValue * 2}px`;
+                });
+            });
+        });
+
+        tilt.addEventListener('mouseout', () =>
+        {
+            cards.style.transform = `rotateX(0deg) rotateY(0deg)`;
+
+            images.forEach(image =>
+            {
+                image.style.transform = `translateX(0px) translateY(0px)`;
+            });
+
+            backgrounds.forEach(background =>
+            {
+                background.style.backgroundPosition = `0px 0px`;
+            });
+        });
+    });
+}
+
 /* || START FUNCTIONS */
 
 document.addEventListener("DOMContentLoaded", () =>
 {
     homeParallax();
     AboutParallax();
+
+    new SmoothScroll(document, 120, 60);
+
+    CardParallax();
+
 });
