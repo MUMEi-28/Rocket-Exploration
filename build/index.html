@@ -126,7 +126,7 @@
                 src="../Images/About/rocketSmoke.png" alt="">
         </section>
 
-        <section id="rockets" class="min-h-screen bg-gradient-to-b from-[#8E59AA] via-indigo-600 to-purple-900">
+        <section id="rockets" class="min-h-screen bg-gradient-to-b from-[#8E59AA] via-sky-600 to-sky-800">
 
             <div id="card-container" class="min-h-screen flex flex-col justify-center items-centers">
 
@@ -135,32 +135,44 @@
                 <div id="cards" class="flex flex-col gap-10 justify-evenly items-center xl:flex-row xl:gap-0  ">
 
                     <!-- CARD 1 -->
-                    <div class="w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 px-6 py-2">
+                    <div
+                        class="tilt w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 rounded-2xl shadow-xl px-6 py-2">
                         <h2 class="font-bold text-2xl my-5 text-center text-white whitespace-nowrap">Jupiter Flyby</h2>
 
                         <div
-                            class="shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden ">
-                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Stars.png" alt="">
-                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Jupiter.png" alt="">
+                            class="cards shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden ">
+                            <!-- <img class=" starBgMission absolute object-cover w-full h-full"
+                                src="../Images/Cards/Stars.png" alt=""> -->
+
+                            <div class="starBg w-full h-full absolute bg-contain"></div>
+
+                            <img class="card__img absolute object-cover w-full h-full" src="../Images/Cards/Jupiter.png"
+                                alt="" style="perspective: 900px;">
 
                         </div>
 
-                        <p class="text-center text-white text-lg mt-[2rem]">Experience a close encounter with Jupiter,
+                        <p class=" text-center text-white text-lg mt-[2rem]">Experience a close encounter with Jupiter,
                             witnessing its swirling storms and iconic Great Red Spot.
                         </p>
                         <button class="mt-4 bg-indigo-700 px-6 py-3 rounded-xl text-white ">Get Ticket</button>
                     </div>
 
                     <!-- CARD 2 -->
-                    <div class="w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 px-6 py-2">
+                    <div
+                        class="tilt w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 rounded-2xl shadow-xl px-6 py-2">
                         <h2 class="font-bold text-2xl my-5 text-center text-white whitespace-nowrap">Saturn Ring
                             Exploration
                         </h2>
 
                         <div
-                            class="shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden">
-                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Stars.png" alt="">
-                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Saturn.png" alt="">
+                            class="cards shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden">
+                            <!--  <img class="starBgMission absolute object-cover w-full h-full"
+                                src="../Images/Cards/Stars.png" alt=""> -->
+
+                            <div class="starBg w-full h-full absolute bg-contain"></div>
+
+                            <img class="card__img absolute object-cover w-full h-full" src="../Images/Cards/Saturn.png"
+                                alt="">
 
                         </div>
                         <p class="text-center text-white text-lg mt-[2rem]">Journey to Saturn and glide through its
@@ -171,15 +183,21 @@
                     </div>
 
                     <!-- CARD 3 -->
-                    <div class="w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 px-6 py-2 ">
+                    <div
+                        class="tilt w-[25rem] h-[35rem] flex flex-col items-center  bg-indigo-600 rounded-2xl shadow-xl px-6 py-2 ">
 
                         <h2 class="font-bold text-2xl my-5 text-center text-white whitespace-nowrap">Space Station Visit
                         </h2>
 
                         <div
-                            class="shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden">
-                            <img class="absolute object-cover w-full h-full" src="../Images/Cards/Stars.png" alt="">
-                            <img class=" absolute object-cover w-full h-full" src="../Images/Cards/ISS.png" alt="">
+                            class="cards shadow-2xl shadow-indigo-950 relative bg-indigo-800 w-full h-[15rem] overflow-hidden">
+                            <!--  <img class="starBgMission absolute object-cover w-full h-full"
+                                src="../Images/Cards/Stars.png" alt=""> -->
+
+                            <div class="starBg w-full h-full absolute bg-contain"></div>
+
+                            <img class="card__img absolute object-cover w-full h-full" src="../Images/Cards/ISS.png"
+                                alt="">
 
                         </div>
                         <p class="text-center text-white text-lg mt-[2rem]">Tour the International Space Station,

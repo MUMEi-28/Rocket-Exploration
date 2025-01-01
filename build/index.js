@@ -89,10 +89,6 @@ function AboutParallax()
 
 
 /// SMOOTHER SCROLLING https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript
-function init()
-{
-    new SmoothScroll(document, 120, 30);
-}
 
 function SmoothScroll(target, speed, smooth)
 {
@@ -117,6 +113,67 @@ function SmoothScroll(target, speed, smooth)
         else moving = false;
     }
 }
+function CardParallax()
+{
+    const tiltEls = document.querySelectorAll('.tilt');
+
+    tiltEls.forEach(tilt =>
+    {
+        const backgrounds = tilt.querySelectorAll(".starBg");
+        const cards = tilt.querySelector(".cards");
+        const images = tilt.querySelectorAll(".card__img");
+        const range = 50; // Adjusted range for a more balanced effect
+
+        const calcValue = (a, b) => (a / b * range - range / 2).toFixed(1);
+
+        let timeout;
+
+        tilt.addEventListener('mousemove', (e) =>
+        {
+            if (timeout)
+            {
+                window.cancelAnimationFrame(timeout);
+            }
+
+            timeout = window.requestAnimationFrame(() =>
+            {
+                const rect = tilt.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                const x = e.clientX - rect.left;
+
+                const yValue = calcValue(y, tilt.clientHeight);
+                const xValue = calcValue(x, tilt.clientWidth);
+
+                cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+                images.forEach(image =>
+                {
+                    image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+                });
+
+                backgrounds.forEach(background =>
+                {
+                    background.style.backgroundPosition = `${xValue * 2}px ${-yValue * 2}px`;
+                });
+            });
+        });
+
+        tilt.addEventListener('mouseout', () =>
+        {
+            cards.style.transform = `rotateX(0deg) rotateY(0deg)`;
+
+            images.forEach(image =>
+            {
+                image.style.transform = `translateX(0px) translateY(0px)`;
+            });
+
+            backgrounds.forEach(background =>
+            {
+                background.style.backgroundPosition = `0px 0px`;
+            });
+        });
+    });
+}
 
 /* || START FUNCTIONS */
 
@@ -126,5 +183,7 @@ document.addEventListener("DOMContentLoaded", () =>
     AboutParallax();
 
     new SmoothScroll(document, 120, 60);
+
+    CardParallax();
 
 });

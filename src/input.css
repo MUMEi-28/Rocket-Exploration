@@ -34,3 +34,8 @@
 
     pointer-events: none;
 }
+
+.starBg
+{
+    background-image: url("../../Images/Cards/Stars.png");
+}
