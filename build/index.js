@@ -175,41 +175,6 @@ function CardParallax()
     });
 }
 
-function MoveFlyingRocket()
-{
-    const rocket1 = document.getElementById("rocket1");
-    const rocket2 = document.getElementById("rocket2");
-
-    let lastScrollY = 0; // Store the last scroll position
-
-    window.addEventListener('scroll', function ()
-    {
-        const scrollY = window.scrollY;
-
-        // Move the rockets
-        rocket1.style.transform = `translate(${scrollY * 1.4}px, ${scrollY * 0.48}px)`;
-
-
-        rocket2.style.transform = `translate(${scrollY * -1.4}px, ${scrollY * 0.38}px)`;
-
-        // Determine scroll direction and flip the images
-        if (scrollY > lastScrollY)
-        {
-            // Scrolling down - ensure no flip
-            rocket1.style.scaleX = "1";
-            rocket2.style.transform += " scaleX(-1)";
-        } else
-        {
-            // Scrolling up - flip horizontally
-            rocket1.style.transform += " scaleX(-1)";
-            rocket2.style.scaleX = "1";
-        }
-
-        lastScrollY = scrollY; // Update the last scroll position
-    });
-}
-
-
 /* || START FUNCTIONS */
 
 document.addEventListener("DOMContentLoaded", () =>
@@ -220,7 +185,5 @@ document.addEventListener("DOMContentLoaded", () =>
     new SmoothScroll(document, 120, 60);
 
     CardParallax();
-
-    MoveFlyingRocket();
 
 });
