@@ -64,25 +64,28 @@ function AboutParallax()
         const aboutSection = document.getElementById("about");
         const rect = aboutSection.getBoundingClientRect();
 
+        if (rect.top < window.innerHeight)
+        {
 
 
-        // If the sections lowest area has been scrolled by the user, then make the smoke go up too
-        rocketSmoke.style.transform = `translateY(${scrollY * -0.3}px)`; // I CAN'T );
+            // If the sections lowest area has been scrolled by the user, then make the smoke go up too
+            rocketSmoke.style.transform = `translateY(${scrollY * -0.1}px)`; // I CAN'T );
 
-        aboutContainer.style.transform = `translateY(${scrollY * 0.5}px)`;
+            aboutContainer.style.transform = `translateY(${scrollY * 0.5}px)`;
 
-        rocket.style.transform = `translateY(${scrollY * -0.9}px)`;
-        rocketExplorerText.style.transform = `translateX(${scrollY * -1.05}px)`;
+            rocket.style.transform = `translateY(${scrollY * -0.9}px)`;
+            rocketExplorerText.style.transform = `translateX(${scrollY * -0.8}px)`;
 
-        cloudAbout1.style.transform = `translate(${scrollY * 0.1}px, ${scrollY * -0.15}px) 
+            cloudAbout1.style.transform = `translate(${scrollY * 0.1}px, ${scrollY * -0.15}px) 
         scale(${1 + (scrollY * -0.0003)}, ${1 + (scrollY * -0.0003)})`;
 
-        /*   cloudAbout2.style.transform = `translate(${scrollY * 0.3}px, ${scrollY * -0.2}px) 
-          scale(${1 + (scrollY * -0.0001)}, ${1 + (scrollY * -0.0001)})`; */
+            /*   cloudAbout2.style.transform = `translate(${scrollY * 0.3}px, ${scrollY * -0.2}px) 
+              scale(${1 + (scrollY * -0.0001)}, ${1 + (scrollY * -0.0001)})`; */
 
 
 
-        outerCloudAbout.style.transform = `translateX(${scrollY * 0.15}px)`
+            outerCloudAbout.style.transform = `translateX(${scrollY * 0.15}px)`
+        }
 
     });
 }

@@ -66,17 +66,25 @@
                 src="../Images/Home/InnerCloudRight.png" alt="cloud">
 
             <img id="OuterCloud"
-                class="absolute  w-full h-full top-0 left-0 pointer-events-none object-cover lg:object-fill"
+                class="absolute  w-full h-full top-0 left-0 pointer-events-none object-contain lg:object-fill"
                 src="../Images/Home/outerCloud.png" alt="cloud">
 
         </section>
 
 
         <section id="about"
-            class=" min-h-screen bg-gradient-to-b from-pink-400  via-sky-600 to-sky-700 z-0 flex items-center flex-col justify-end relative overflow-hidden">
+            class=" min-h-screen bg-gradient-to-b from-pink-400  via-sky-600 to-sky-700 z-0 flex items-center flex-col justify-center relative overflow-hidden">
 
             <!--             <input type="text" autofocus>
  -->
+
+            <h1 id="rocketExplorerText"
+                class="text-white text-[4rem]  my-[3.5rem] relative left-[900px] font-bold bottom-[-18rem] ">
+                ROCKET
+                EXPLORER
+            </h1>
+
+
             <img id="cloudAbout1"
                 class="absolute  w-full h-full top-[-10rem] left-0 pointer-events-none object-cover lg:object-fill"
                 src="../Images/About/cloudAbout1.png" alt="">
@@ -85,13 +93,13 @@
                 class="absolute  w-full h-full top-[-10rem] left-0 pointer-events-none object-cover lg:object-fill"
                 src="../Images/About/cloudAbout2.png" alt="">
 
-            <div id="aboutContainer" class="absolute bottom-[35rem] w-[40rem] h-9w-[40rem]">
+            <div id="aboutContainer" class=" absolute bottom-[60rem] w-[40rem] h-9w-[40rem]">
                 <h1 class="relative bottom-[2rem] text-center text-4xl font-extrabold text-white">About Rocket Explorer
                 </h1>
 
                 <img src="../Images/About/ContainerTransparent.png" alt="container" class=" w-full h-full object-cover">
 
-                <div class="absolute inset-0 flex flex-col items-center justify-center text-white ">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 ">
 
 
                     <p class="text-center text-base lg:text-lg text-white mx-[6rem] relative bottom-[-2rem]">
@@ -118,17 +126,16 @@
 
 
             <img id="rocket"
-                class="absolute  w-auto h-full top-[40rem] left-0 pointer-events-none object-cover lg:object-fill"
+                class="absolute z-0  w-auto h-full top-[40rem] left-0 pointer-events-none object-cover lg:object-fill"
                 src="../Images/About/rocket.png" alt="">
 
-            <h1 id="rocketExplorerText" class="text-white text-[4rem]  my-[3.5rem] relative left-[900px] font-bold  ">
-                ROCKET
-                EXPLORER
-            </h1>
+
 
             <img id="outerCloudAbout"
                 class="absolute  w-full h-full top-0 left-0 pointer-events-none object-cover lg:object-fill"
                 src="../Images/About/outerCloudAbout.png" alt="">
+
+
 
             <img id="rocketSmoke"
                 class=" absolute  w-full h-full  left-0 top-[48rem] pointer-events-none object-cover lg:object-fill "
@@ -220,16 +227,68 @@
 
         </section>
 
+        <section id="contact-us"
+            class="lg:flex justify-around items-center min-h-screen  bg-gradient-to-b from-sky-800 to-sky-600 text-white hidden">
 
+            <div class="flex flex-col gap-3 ">
+                <h1 class="text-5xl ">Contact Us</h1>
+                <p>Email, call or complete the form to learn how fun exploring the universe is!</p>
+
+                <div class="flex flex-row ">
+                    <section class="flex flex-col gap-3  w-[20rem] py-3">
+                        <h2 class="font-bold">Customer Support</h2>
+                        <p>Our support team is available anytime and anywhere in the galaxy to address any concerns you
+                            have.</p>
+                    </section>
+                    <section class="flex flex-col gap-3  w-[20rem] py-3">
+                        <h2 class="font-bold">Feedback and Suggestions</h2>
+                        <p>We value your feeback and are continuesly working to make your travels comfortable.</p>
+                    </section>
+                </div>
+            </div>
+
+            <form
+                class="bg-slate-100 text-slate-800 p-8 rounded-3xl shadow-2xl flex flex-col justify-center gap-[0.75rem]">
+                <h1 class="text-4xl pb-">Get in Touch</h1>
+                <p class="py-3">You can reach us anytime</p>
+                <div class="flex gap-3">
+                    <label class="py-2">First Name
+                        <input class="p-3 text-lg w-full border-slate-300 border-2 rounded-xl" type="text"
+                            placeholder="Juan">
+                    </label>
+                    <label class="py-2">
+                        Last Name
+                        <input class="p-3 text-lg w-full border-slate-300 border-2 rounded-xl" type="text"
+                            placeholder="Dela Cruz">
+                    </label>
+                </div>
+                <label class="py-2">Email
+
+                    <input class="p-3 text-lg w-full border-slate-300 border-2 rounded-xl" type="email"
+                        placeholder="juanDelaCruz@gmail.com">
+                </label>
+                <label class="py-2">Phone
+
+                    <input class="p-3 text-lg w-full border-slate-300 border-2 rounded-xl" type="number"
+                        placeholder="123456789">
+                </label>
+                <label class="flex flex-col">Message
+                    <textarea rows="10" placeholder="How can we help?" class="p-2"></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
 
     <footer class=" min-h-[20vh] bg-indigo-800 text-white flex flex-col items-center justify-between gap-2">
         <p class="text-[1.2rem] mt-[1rem]">copyright &copy; 2025 by MJ</p>
         <div class="flex flex-row items-center gap-3">
-            <a class="text-[1.2rem]" href="https://github.com/MUMEi-28" target="_blank">↓ Github Repository ↓</a>
+            <a class="text-[1.2rem] " href="https://github.com/MUMEi-28" target="_blank">↓ <span
+                    class="underline">Github
+                    Repository</span> ↓</a>
         </div>
 
-        <p class="my-[1.5rem]">Contact Me if U Want a Site Like This At: <a
+        <p class="my-[1.5rem]">Contact Me if U Want a Site Like This At: <a class=""
                 href="mailto:marcjerseycastro@gmail.com">marcjerseycastro@gmail.com</a></p>
     </footer>
 </body>
